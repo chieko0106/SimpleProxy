@@ -1,0 +1,6 @@
+locale simpleproxy en-US locale/en-US/
+locale simpleproxy ja locale/ja/
+locale simpleproxy zh-CN locale/zh-CN/
+resource simpleproxy resource/
+content simpleproxy content/
+skin simpleproxy classic skin/

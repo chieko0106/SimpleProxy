@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!DOCTYPE page SYSTEM "chrome://simpleproxy/locale/options.dtd">
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<setting type="control">
+  <button id="simpleproxy-pac" label="&simpleproxy-pac;"/>
+</setting>
+<setting pref="extensions.simpleproxy.manage" type="menulist" title="&simpleproxy-manage;">
+  <menulist id="simpleproxy-manage">
+    <menupopup>
+      <menuitem value="0" id="simpleproxy-switch_0" label="&simpleproxy-profile0;"/>
+      <menuitem value="1" id="simpleproxy-switch_1" label="&simpleproxy-profile1;"/>
+      <menuitem value="2" id="simpleproxy-switch_2" label="&simpleproxy-profile2;"/>
+      <menuitem value="3" id="simpleproxy-switch_3" label="&simpleproxy-profile3;"/>
+      <menuitem value="4" id="simpleproxy-switch_4" label="&simpleproxy-profile4;"/>
+      <menuitem value="5" id="simpleproxy-switch_5" label="&simpleproxy-profile5;"/>
+      <menuitem value="6" id="simpleproxy-switch_6" label="&simpleproxy-profile6;"/>
+      <menuitem value="7" id="simpleproxy-switch_7" label="&simpleproxy-profile7;"/>
+      <menuitem value="8" id="simpleproxy-switch_8" label="&simpleproxy-profile8;"/>
+      <menuitem value="9" id="simpleproxy-switch_9" label="&simpleproxy-profile9;"/>
+      <menuitem value="10" id="simpleproxy-switch_10" label="&simpleproxy-profile10;"/>
+    </menupopup>
+  </menulist>
+</setting>
+<setting pref="extensions.simpleproxy.number" type="integer" min="1" max="9" title="&simpleproxy-number;"/>
+<setting pref="extensions.simpleproxy.list.0" id="simpleproxy-list_0" type="file" title="&simpleproxy-profile0;"/>
+<setting pref="extensions.simpleproxy.list.0" id="simpleproxy-list.0" type="string" title="&simpleproxy-list;"/>
+<setting type="control">
+  <button id="simpleproxy-editor.0" label="&simpleproxy-editor;"/>
+</setting>
+<setting pref="extensions.simpleproxy.protocol.0" type="menulist" title="&simpleproxy-protocol;">
+  <menulist id="simpleproxy-protocol_0">
+    <menupopup>
+      <menuitem value="http" label="HTTP(S)"/>
+      <menuitem value="socks" label="SOCKS"/>
+      <menuitem value="socks4" label="SOCKS4"/>
+    </menupopup>
+  </menulist>
+</setting>
+<setting pref="extensions.simpleproxy.address.0" id="simpleproxy-address_0" type="string" title="&simpleproxy-address;"/>
+<setting pref="extensions.simpleproxy.port.0" id="simpleproxy-port_0" type="integer" min="0" max="65535" title="&simpleproxy-port;"/>
+<setting type="control">
+  <button id="simpleproxy-reset.0" label="&simpleproxy-reset;"/>
+</setting>
+<setting pref="extensions.simpleproxy.list.1" id="simpleproxy-list_1" type="file" title="&simpleproxy-profile1;"/>
+<setting pref="extensions.simpleproxy.list.1" id="simpleproxy-list.1" type="string" title="&simpleproxy-list;"/>
+<setting type="control">
+  <button id="simpleproxy-editor.1" label="&simpleproxy-editor;"/>
+</setting>
+<setting pref="extensions.simpleproxy.protocol.1" type="menulist" title="&simpleproxy-protocol;">
+  <menulist id="simpleproxy-protocol_1">
+    <menupopup>
+      <menuitem value="http" label="HTTP(S)"/>
+      <menuitem value="socks" label="SOCKS"/>
+      <menuitem value="socks4" label="SOCKS4"/>
+    </menupopup>
+  </menulist>
+</setting>
+<setting pref="extensions.simpleproxy.address.1" id="simpleproxy-address_1" type="string" title="&simpleproxy-address;"/>
+<setting pref="extensions.simpleproxy.port.1" id="simpleproxy-port_1" type="integer" min="0" max="65535" title="&simpleproxy-port;"/>
+<setting type="control">
+  <button id="simpleproxy-reset.1" label="&simpleproxy-reset;"/>
+</setting>
+<setting pref="extensions.simpleproxy.list.2" id="simpleproxy-list_2" type="file" title="&simpleproxy-profile2;"/>
+<setting pref="extensions.simpleproxy.list.2" id="simpleproxy-list.2" type="string" title="&simpleproxy-list;"/>
+<setting type="control">
+  <button id="simpleproxy-editor.2" label="&simpleproxy-editor;"/>
+</setting>
+<setting pref="extensions.simpleproxy.protocol.2" type="menulist" title="&simpleproxy-protocol;">
+  <menulist id="simpleproxy-protocol_2">
+    <menupopup>
+      <menuitem value="http" label="HTTP(S)"/>
+      <menuitem value="socks" label="SOCKS"/>
+      <menuitem value="socks4" label="SOCKS4"/>
+    </menupopup>
+  </menulist>
+</setting>
+<setting pref="extensions.simpleproxy.address.2" id="simpleproxy-address_2" type="string" title="&simpleproxy-address;"/>
+<setting pref="extensions.simpleproxy.port.2" id="simpleproxy-port_2" type="integer" min="0" max="65535" title="&simpleproxy-port;"/>
+<setting type="control">
+  <button id="simpleproxy-reset.2" label="&simpleproxy-reset;"/>
+</setting>
+<setting pref="extensions.simpleproxy.list.3" id="simpleproxy-list_3" type="file" title="&simpleproxy-profile3;"/>
+<setting pref="extensions.simpleproxy.list.3" id="simpleproxy-list.3" type="string" title="&simpleproxy-list;"/>
+<setting type="control">
+  <button id="simpleproxy-editor.3" label="&simpleproxy-editor;"/>
+</setting>
+<setting pref="extensions.simpleproxy.protocol.3" type="menulist" title="&simpleproxy-protocol;">
+  <menulist id="simpleproxy-protocol_3">
+    <menupopup>
+      <menuitem value="http" label="HTTP(S)"/>
+      <menuitem value="socks" label="SOCKS"/>
+      <menuitem value="socks4" label="SOCKS4"/>
+    </menupopup>
+  </menulist>
+</setting>
+<setting pref="extensions.simpleproxy.address.3" id="simpleproxy-address_3" type="string" title="&simpleproxy-address;"/>
+<setting pref="extensions.simpleproxy.port.3" id="simpleproxy-port_3" type="integer" min="0" max="65535" title="&simpleproxy-port;"/>
+<setting type="control">
+  <button id="simpleproxy-reset.3" label="&simpleproxy-reset;"/>
+</setting>
+<setting pref="extensions.simpleproxy.list.4" id="simpleproxy-list_4" type="file" title="&simpleproxy-profile4;"/>
+<setting pref="extensions.simpleproxy.list.4" id="simpleproxy-list.4" type="string" title="&simpleproxy-list;"/>
+<setting type="control">
+  <button id="simpleproxy-editor.4" label="&simpleproxy-editor;"/>
+</setting>
+<setting pref="extensions.simpleproxy.protocol.4" type="menulist" title="&simpleproxy-protocol;">
+  <menulist id="simpleproxy-protocol_4">
+    <menupopup>
+      <menuitem value="http" label="HTTP(S)"/>
+      <menuitem value="socks" label="SOCKS"/>
+      <menuitem value="socks4" label="SOCKS4"/>
+    </menupopup>
+  </menulist>
+</setting>
+<setting pref="extensions.simpleproxy.address.4" id="simpleproxy-address_4" type="string" title="&simpleproxy-address;"/>
+<setting pref="extensions.simpleproxy.port.4" id="simpleproxy-port_4" type="integer" min="0" max="65535" title="&simpleproxy-port;"/>
+<setting type="control">
+  <button id="simpleproxy-reset.4" label="&simpleproxy-reset;"/>
+</setting>
+<setting pref="extensions.simpleproxy.list.5" id="simpleproxy-list_5" type="file" title="&simpleproxy-profile5;"/>
+<setting pref="extensions.simpleproxy.list.5" id="simpleproxy-list.5" type="string" title="&simpleproxy-list;"/>
+<setting type="control">
+  <button id="simpleproxy-editor.5" label="&simpleproxy-editor;"/>
+</setting>
+<setting pref="extensions.simpleproxy.protocol.5" type="menulist" title="&simpleproxy-protocol;">
+  <menulist id="simpleproxy-protocol_5">
+    <menupopup>
+      <menuitem value="http" label="HTTP(S)"/>
+      <menuitem value="socks" label="SOCKS"/>
+      <menuitem value="socks4" label="SOCKS4"/>
+    </menupopup>
+  </menulist>
+</setting>
+<setting pref="extensions.simpleproxy.address.5" id="simpleproxy-address_5" type="string" title="&simpleproxy-address;"/>
+<setting pref="extensions.simpleproxy.port.5" id="simpleproxy-port_5" type="integer" min="0" max="65535" title="&simpleproxy-port;"/>
+<setting type="control">
+  <button id="simpleproxy-reset.5" label="&simpleproxy-reset;"/>
+</setting>
+<setting pref="extensions.simpleproxy.list.6" id="simpleproxy-list_6" type="file" title="&simpleproxy-profile6;"/>
+<setting pref="extensions.simpleproxy.list.6" id="simpleproxy-list.6" type="string" title="&simpleproxy-list;"/>
+<setting type="control">
+  <button id="simpleproxy-editor.6" label="&simpleproxy-editor;"/>
+</setting>
+<setting pref="extensions.simpleproxy.protocol.6" type="menulist" title="&simpleproxy-protocol;">
+  <menulist id="simpleproxy-protocol_6">
+    <menupopup>
+      <menuitem value="http" label="HTTP(S)"/>
+      <menuitem value="socks" label="SOCKS"/>
+      <menuitem value="socks4" label="SOCKS4"/>
+    </menupopup>
+  </menulist>
+</setting>
+<setting pref="extensions.simpleproxy.address.6" id="simpleproxy-address_6" type="string" title="&simpleproxy-address;"/>
+<setting pref="extensions.simpleproxy.port.6" id="simpleproxy-port_6" type="integer" min="0" max="65535" title="&simpleproxy-port;"/>
+<setting type="control">
+  <button id="simpleproxy-reset.6" label="&simpleproxy-reset;"/>
+</setting>
+<setting pref="extensions.simpleproxy.list.7" id="simpleproxy-list_7" type="file" title="&simpleproxy-profile7;"/>
+<setting pref="extensions.simpleproxy.list.7" id="simpleproxy-list.7" type="string" title="&simpleproxy-list;"/>
+<setting type="control">
+  <button id="simpleproxy-editor.7" label="&simpleproxy-editor;"/>
+</setting>
+<setting pref="extensions.simpleproxy.protocol.7" type="menulist" title="&simpleproxy-protocol;">
+  <menulist id="simpleproxy-protocol_7">
+    <menupopup>
+      <menuitem value="http" label="HTTP(S)"/>
+      <menuitem value="socks" label="SOCKS"/>
+      <menuitem value="socks4" label="SOCKS4"/>
+    </menupopup>
+  </menulist>
+</setting>
+<setting pref="extensions.simpleproxy.address.7" id="simpleproxy-address_7" type="string" title="&simpleproxy-address;"/>
+<setting pref="extensions.simpleproxy.port.7" id="simpleproxy-port_7" type="integer" min="0" max="65535" title="&simpleproxy-port;"/>
+<setting type="control">
+  <button id="simpleproxy-reset.7" label="&simpleproxy-reset;"/>
+</setting>
+<setting pref="extensions.simpleproxy.list.8" id="simpleproxy-list_8" type="file" title="&simpleproxy-profile8;"/>
+<setting pref="extensions.simpleproxy.list.8" id="simpleproxy-list.8" type="string" title="&simpleproxy-list;"/>
+<setting type="control">
+  <button id="simpleproxy-editor.8" label="&simpleproxy-editor;"/>
+</setting>
+<setting pref="extensions.simpleproxy.protocol.8" type="menulist" title="&simpleproxy-protocol;">
+  <menulist id="simpleproxy-protocol_8">
+    <menupopup>
+      <menuitem value="http" label="HTTP(S)"/>
+      <menuitem value="socks" label="SOCKS"/>
+      <menuitem value="socks4" label="SOCKS4"/>
+    </menupopup>
+  </menulist>
+</setting>
+<setting pref="extensions.simpleproxy.address.8" id="simpleproxy-address_8" type="string" title="&simpleproxy-address;"/>
+<setting pref="extensions.simpleproxy.port.8" id="simpleproxy-port_8" type="integer" min="0" max="65535" title="&simpleproxy-port;"/>
+<setting type="control">
+  <button id="simpleproxy-reset.8" label="&simpleproxy-reset;"/>
+</setting>
+</vbox>
