@@ -1,0 +1,6 @@
+.git
+.gitignore
+.jpmignore
+*.xpi
+*.update.rdf
+*.bat
