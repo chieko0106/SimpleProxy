@@ -9,7 +9,6 @@ function startup(data, reason) {
   Cu.import("chrome://simpleproxy/content/proxy.js");
   Cu.import("chrome://simpleproxy/content/config.js");
 
-console.log(app)
   if (app == "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}") {
     Cu.import("chrome://simpleproxy/content/toolbar.js");
 
