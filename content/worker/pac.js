@@ -33,7 +33,7 @@ var PAC = {
   match: function () {
     var num = Preferences.getValue( { name: "number", type: "integer" } );
     var array = [];
-	if (num == 1) {
+    if (num == 1) {
       if (Storage[0].match == undefined || Storage[0].match.length == 0 || Storage[0].host == undefined) return "";
       var match = Storage[0].match, host = Storage[0].host;
       var _match = "match: [" + match.join() + "],";
