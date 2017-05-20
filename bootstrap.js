@@ -18,22 +18,20 @@ function startup(data, reason) {
 
 function shutdown(data, reason) {
   Events.off();
+  Cu.unload("chrome://simpleproxy/content/events.js");
   Proxy.off();
+  Cu.unload("chrome://simpleproxy/content/proxy.js");
   Configuration.off();
+  Cu.unload("chrome://simpleproxy/content/config.js");
   if (app == "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}") {
     Toolbar.off();
+    Cu.unload("chrome://simpleproxy/content/toolbar.js");
   }
 
-  Cu.unload("chrome://simpleproxy/content/config.js");
   Cu.unload("chrome://simpleproxy/content/core.js");
-  Cu.unload("chrome://simpleproxy/content/events.js");
-  Cu.unload("chrome://simpleproxy/content/proxy.js");
   Cu.unload("chrome://simpleproxy/content/worker.js");
   Cu.unload("chrome://simpleproxy/content/worker/pac.js");
   Cu.unload("chrome://simpleproxy/content/worker/editor.js");
-  if (app == "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}") {
-    Cu.unload("chrome://simpleproxy/content/toolbar.js");
-  }
   Cu.unload("resource://simpleproxy/file-io.js");
   Cu.unload("resource://simpleproxy/makepattern.js");
   Cu.unload("resource://simpleproxy/pref-tuils.js");
