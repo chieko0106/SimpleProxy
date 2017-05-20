@@ -2,50 +2,27 @@
 
 var Cc = Components.classes, Ci = Components.interfaces, Cu = Components.utils;
 var app = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULAppInfo).ID
-var loader;
 
 function startup(data, reason) {
   Cu.import("chrome://simpleproxy/content/events.js");
+  Events.on();
   Cu.import("chrome://simpleproxy/content/proxy.js");
+  Proxy.on();
   Cu.import("chrome://simpleproxy/content/config.js");
-
+  Configuration.on();
   if (app == "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}") {
     Cu.import("chrome://simpleproxy/content/toolbar.js");
-
-    loader = {
-      on: function () {
-        Events.on();
-        Proxy.on();
-        Configuration.on();
-        Toolbar.on();
-      },
-      off: function () {
-        Events.off();
-        Proxy.off();
-        Configuration.off();
-        Toolbar.off();
-      }
-    };
+    Toolbar.on();
   }
-  else {
-    loader = {
-      on: function () {
-        Events.on();
-        Proxy.on();
-        Configuration.on();
-      },
-      off: function () {
-        Events.off();
-        Proxy.off();
-        Configuration.off();
-      }
-    };
-  }
-  loader.on();
 }
 
 function shutdown(data, reason) {
-  loader.off();
+  Events.off();
+  Proxy.off();
+  Configuration.off();
+  if (app == "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}") {
+    Toolbar.off();
+  }
 
   Cu.unload("chrome://simpleproxy/content/config.js");
   Cu.unload("chrome://simpleproxy/content/core.js");

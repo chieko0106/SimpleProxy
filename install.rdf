@@ -9,7 +9,7 @@
     <em:type>2</em:type>
     <em:bootstrap>true</em:bootstrap>
     <em:multiprocessCompatible>true</em:multiprocessCompatible>
-    <em:version>1.10.2</em:version>
+    <em:version>1.10.3</em:version>
     <em:name>Simple Proxy</em:name>
     <em:creator>jc3213</em:creator>
     <em:homepageURL>https://github.com/jc3213/SimpleProxy/</em:homepageURL>

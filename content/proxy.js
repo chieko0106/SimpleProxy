@@ -8,24 +8,24 @@ Cu.import("resource://simpleproxy/storage.js");
 
 var Proxy = {
   applyFilter: function (service, uri, proxy) {
-    for (var i in Storage) {
-      if (Storage[i].disabled == true || Storage[i].proxy == undefined || Storage[i].file == undefined) continue;
-
-      var white = Storage[i].white, match = Storage[i].match, server = Storage[i].proxy;
-
-      if (white != undefined) {
-        for (var x in white) {
-          var rule = white[x];
-          if (rule.test(uri.spec)) {
-            return proxy;
-          }
+    var white = Storage[999];
+    if (white.length > 0) {
+      for (var i in white) {
+        var rule = white[i];
+        if (rule.test(uri.spec)) {
+          return proxy;
         }
       }
+    }
 
-      if (match != undefined) {
-        for (var y in match) {
-          var _rule = match[y];
-          if (_rule.test(uri.spec)) {
+    for (var i in Storage) {
+      if (Storage[i].disabled == true || Storage[i].match == undefined || Storage[i].proxy == undefined) continue;
+
+      var match = Storage[i].match, server = Storage[i].proxy;
+      if (match.length > 0) {
+        for (var x in match) {
+          var rule = match[x];
+          if (rule.test(uri.spec)) {
             return server;
           }
         }
