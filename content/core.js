@@ -3,7 +3,6 @@
 var EXPORTED_SYMBOLS = ["Core"];
 
 var Cc = Components.classes, Ci = Components.interfaces, Cu = Components.utils;
-var window = Cc["@mozilla.org/appshell/window-mediator;1"].getService(Ci.nsIWindowMediator).getMostRecentWindow("");
 Cu.import("resource://simpleproxy/storage.js");
 Cu.import("resource://simpleproxy/sync.js");
 Cu.import("resource://simpleproxy/file-io.js");
@@ -25,6 +24,8 @@ var Core = {
     storage.white = [], storage.match = [];
 
     try {
+      var wm = Cc["@mozilla.org/appshell/window-mediator;1"].getService(Ci.nsIWindowMediator);
+      var window = wm.getMostRecentWindow("");
       var list = window.atob(storage.buffer).split(/[\r\n]+/);
     }
     catch (e) {

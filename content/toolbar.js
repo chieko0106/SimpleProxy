@@ -3,7 +3,6 @@
 var EXPORTED_SYMBOLS = ["Toolbar"];
 
 var Cc = Components.classes, Ci = Components.interfaces, Cu = Components.utils;
-var window = Cc["@mozilla.org/appshell/window-mediator;1"].getService(Ci.nsIWindowMediator).getMostRecentWindow("");
 var strings = Cc["@mozilla.org/intl/stringbundle;1"].getService(Ci.nsIStringBundleService);
 var stringBundle = strings.createBundle('chrome://simpleproxy/locale/toolbar.properties?' + Math.random());
 var activeTabHost = "";
@@ -89,6 +88,8 @@ var Toolbar = {
       if (event.target.id == "simpleproxy-rule-" + i) {
         if (Storage[i].file != undefined && Storage[i].fetch == undefined) {
           try {
+            var wm = Cc["@mozilla.org/appshell/window-mediator;1"].getService(Ci.nsIWindowMediator);
+            var window = wm.getMostRecentWindow("");
             var list = window.atob(Storage[i].buffer);
             list = list + "\r\n||" + activeTabHost;
             Storage[i].buffer = window.btoa(list);
