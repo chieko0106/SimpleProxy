@@ -62,27 +62,31 @@ var Events = {
           Storage[i].disabled = true;
         }
       }
-	  
-      try {
-        Storage[i].list = Preferences.getValue( { name: "list." + i, type: "string" } );
-        Storage[i].protocol = Preferences.getValue( { name: "protocol." + i, type: "string" } );
-        Storage[i].address = Preferences.getValue( { name: "address." + i, type: "string" } );
-        Storage[i].port = Preferences.getValue( { name: "port." + i, type: "integer" } );
-        Events.pendingData(Storage[i]);
+
+      if (i < num ) {
+        try {
+          Storage[i].list = Preferences.getValue( { name: "list." + i, type: "string" } );
+          Events.getPattern(Storage[i]);
+        }
+        catch (e) {
+          Preferences.setValue( { name: "list." + i, type: "string" }, "");
+        }
+
+        try {
+          Storage[i].protocol = Preferences.getValue( { name: "protocol." + i, type: "string" } );
+          Storage[i].address = Preferences.getValue( { name: "address." + i, type: "string" } );
+          Storage[i].port = Preferences.getValue( { name: "port." + i, type: "integer" } );
+          Events.getServer(Storage[i]);
+        }
+        catch (e) {
+          Preferences.setValue( { name: "protocol." + i, type: "string" }, "http");
+          Preferences.setValue( { name: "address." + i, type: "string" }, "");
+          Preferences.setValue( { name: "port." + i, type: "integer" }, 8080);
+        }
       }
-      catch (e) {
-        Preferences.setValue( { name: "list." + i, type: "string" }, "");
-        Preferences.setValue( { name: "protocol." + i, type: "string" }, "http");
-        Preferences.setValue( { name: "address." + i, type: "string" }, "");
-        Preferences.setValue( { name: "port." + i, type: "integer" }, 8080);
-      } 
     }
 
     Events.pendingAddon();
-  },
-  pendingData: function (storage) {
-    Events.getServer(storage);
-    Events.getPattern(storage);
   },
   pendingAddon: function () {
     FileIO.makeFolder(FileIO.folder);
